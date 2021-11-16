@@ -20,7 +20,7 @@ mysql = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="pymodelacion"
+    database="pastas de dientes"
 )
 
 
@@ -51,6 +51,7 @@ for i in range(3):
 cm_nva = np.array(a)
 
 
+## Esta parte del codigo en adelante ya es lo de markov siga ome boba
 an=[]
 N=3
 for n in range(1,N+1):

@@ -8,9 +8,6 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
 from random import choice
 
-
-
-
 # initializations
 app = Flask(__name__)
 
@@ -19,7 +16,7 @@ mysql = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="pymodelacion"
+    database="pastas de dientes"
 )
 
 
