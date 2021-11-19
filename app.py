@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct 26 23:05:44 2020
+Created on Mon nov 09 23:05:44 2021
 
-@author: juan camilo giraldo
+@author: juan camilo giraldo y juan Gutierrez lopez
 """
 from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
@@ -16,7 +16,7 @@ mysql = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="pastas de dientes"
+    database="pymodelacion"
 )
 
 

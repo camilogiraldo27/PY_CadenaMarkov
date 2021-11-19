@@ -20,7 +20,7 @@ mysql = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="pastas de dientes"
+    database="pymodelacion"
 )
 
 
@@ -33,13 +33,6 @@ for i in range(len(cm)):
         suma=suma+ cm[i][j]
     sumaT.append(suma)
     
-cm_nueva=[[],[],[]]
-for i in range(len(cm)):
-    suma=0
-    for j in range(len(cm)):
-        c=cm[i][j]/sumaT[i]
-        
-        
 
 a = []
 for i in range(3):
@@ -51,7 +44,7 @@ for i in range(3):
 cm_nva = np.array(a)
 
 
-## Esta parte del codigo en adelante ya es lo de markov siga ome boba
+## Esta parte del codigo en adelante ya es lo de markov
 an=[]
 N=3
 for n in range(1,N+1):
@@ -93,10 +86,15 @@ navbar= dbc.NavbarSimple(
     )
 
 
-   
+
+posicion=posicion+N
 grafica.layout= html.Div([
     
 navbar,
+dcc.Input(
+            id="input_range_2", type="number", placeholder="input with range",
+            min=1, max=100
+        ),
 dcc.Graph(
     id='life-exp-vs-gdp',
     figure={
@@ -104,8 +102,9 @@ dcc.Graph(
         'data':[
              
              go.Scatter(
+                
                 x=x,
-                y=df.probabilidad[0+posicion:posicion+N],
+                y=df.probabilidad[0+i*3:i*3+N],
                 mode='lines+markers',
                 opacity=0.8,
                 marker={
