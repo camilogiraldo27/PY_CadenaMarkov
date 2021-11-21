@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct 30 11:27:56 2020
+Created on Thu Nov 18 17:15:14 2021
 
-@author: juan camilo giraldo
+@author: Juan Camilo Giraldo-Juan pablo gutierrez
 """
 
 import subprocess
 
-scripts_paths =("C:/Users/ASUS/Documents/Proyecto_Final_MS/app.py","C:/Users/ASUS/Documents/Proyecto_Final_MS/grafica/grafica.py" )
+scripts_paths =("C:/Users/ASUS/Documents/Proyecto_Final_MS/app.py","C:/Users/ASUS/Documents/Proyecto_Final_MS/graficaPrueba.py" )
 
 
 procesos=[subprocess.Popen(["python", script]) for script in scripts_paths]
